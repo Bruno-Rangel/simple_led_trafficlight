@@ -1,0 +1,12 @@
+-Por que os LEDs são Active Low (acendem quando se coloca 0 na saída)? 
+    Físicamente não faz sentido dizer que os LEDs em si são Active Low, tendo em vista que é necessário impor tensão para passagem de corrente e acender o LED, 
+    entretanto em geral os LEDs são concetados a uma tensão positiva por meio de um resistor limitador de forma que seu pino controlável seja Active Low, tudo isso
+    por ser uma forma mais segura de se acender um LED. 
+Quais funções você usou para acender e apagar os LEDs?
+    Foram usadas as funções "set" int gpio_pin_set	(	const struct device *	port, gpio_pin_t	pin, int	value ) e a função "toggle" int gpio_pin_toggle	(	const struct device *	port, gpio_pin_t	pin )
+Explique o que é o DeviceTree.
+    De forma simplificada o DeviceTree é uma estrutura de dados hierárquica que vai ser utilizada a fim de descrever o hardware disponível na placa do microcontrolador.
+    Essa estrutura existe para informar ao Sistema Operacional quais componentes existem e como eles devem ser configurados.
+Explique as abstrações feitas pelo Sistema Operacional. 
+    O sistema operaciona realiza abstrações por meio da DeviceTree a fim de portabilizar o código realizado para outras placas, isso se aplica aos mais diversos componentes
+    de formas diferentes.
